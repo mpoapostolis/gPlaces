@@ -6,6 +6,8 @@ import { bindActionCreators, Dispatch, AnyAction } from "redux"
 import actions from "./redux/actions"
 import { connect } from "react-redux"
 import { Coords } from "./redux/reducers/account"
+import { Router } from "@reach/router"
+import Routes from "./Routes"
 
 export type tFunc = (key: string) => string
 
@@ -29,7 +31,7 @@ function App(props: IProps) {
   }
   return (
     <I18n.Provider value={t}>
-      <MainLayout />
+      <Routes />
     </I18n.Provider>
   )
 }

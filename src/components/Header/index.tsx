@@ -1,4 +1,5 @@
 import React from "react"
+import { navigate } from "@reach/router"
 
 interface IProps {
   layoutClass: string
@@ -7,7 +8,7 @@ interface IProps {
 function Header(props: IProps) {
   return (
     <header className={props.layoutClass}>
-      <h1>Header</h1>
+      <h1 onClick={() => navigate("/")}>Header</h1>
     </header>
   )
 }
