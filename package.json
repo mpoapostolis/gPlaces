@@ -1,0 +1,48 @@
+{
+  "name": "cslp",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@reach/router": "^1.2.1",
+    "emotion": "^10.0.6",
+    "query-string": "^6.4.0",
+    "ramda": "^0.26.1",
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5",
+    "react-redux": "^6.0.0",
+    "react-scripts": "^2.1.8",
+    "redux": "^4.0.1",
+    "redux-actions": "^2.6.4",
+    "redux-saga": "^1.0.0"
+  },
+  "scripts": {
+    "generateI18nList": "./bin/generate_static_i18n_list.sh",
+    "generateI18nJson": "./bin/generate_i18n.sh",
+    "build": "react-scripts build && yarn run generateI18nJson",
+    "prettier": "prettier --write \"./src/**/*.{js,ts,tsx}\" ",
+    "start": "react-scripts start",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "@types/d3": "^5.7.0",
+    "@types/debounce": "^1.2.0",
+    "@types/query-string": "^6.3.0",
+    "@types/ramda": "^0.25.47",
+    "@types/reach__router": "^1.2.3",
+    "@types/react": "^16.7.20",
+    "@types/react-dom": "^16.0.11",
+    "@types/react-redux": "^7.0.0",
+    "@types/redux-actions": "^2.3.1",
+    "typescript": "^3.2.4"
+  }
+}
