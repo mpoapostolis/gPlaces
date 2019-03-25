@@ -6,6 +6,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"time"
 )
 
 var kleidi = os.Getenv("KLEIDI")
@@ -19,11 +20,9 @@ func getPlace(w http.ResponseWriter, r *http.Request) {
 	}
 	defer resp.Body.Close()
 	body, err := ioutil.ReadAll(resp.Body)
-
 	if err != nil {
 		log.Fatal(err)
 	}
-
 	fmt.Println(string(body))
 	w.Header().Set("Content-Type", "application/json")
 	w.Write(body)
@@ -42,13 +41,16 @@ func getImage(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		log.Fatal(err)
 	}
-
 	w.Write(body)
+}
 
+func greet(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "api works! :):)  %s", time.Now())
 }
 
 func main() {
-	http.HandleFunc("/", getPlace)
-	http.HandleFunc("/photo", getImage)
+	http.HandleFunc("/test", greet)
+	http.HandleFunc("/api", getPlace)
+	http.HandleFunc("/api/photo", getImage)
 	http.ListenAndServe(":8080", nil)
 }
