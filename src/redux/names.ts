@@ -1,6 +1,9 @@
 /********************** I18N *********************************************/
-export const UPDATE_I18N = "Update I18N";
-export const UPDATE_LANG = "Update Lang";
+export const UPDATE_I18N = "Update I18N"
+export const UPDATE_LANG = "Update Lang"
 
 /********************** ACCOUNT ******************************************/
-export const SET_ACCOUNT_INFO = "SET Account info";
+export const SET_ACCOUNT_INFO = "SET Account info"
+
+/********************** PLACES ******************************************/
+export const GET_PLACES = "Call to get places"
