@@ -21,7 +21,7 @@
   "scripts": {
     "generateI18nList": "./bin/generate_static_i18n_list.sh",
     "generateI18nJson": "./bin/generate_i18n.sh",
-    "build": "react-scripts build && yarn run generateI18nJson",
+    "build": "react-scripts build",
     "prettier": "prettier --write \"./src/**/*.{js,ts,tsx}\" ",
     "start": "react-scripts start",
     "test": "react-scripts test",
