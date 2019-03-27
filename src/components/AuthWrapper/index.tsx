@@ -11,7 +11,7 @@ interface IProps {
 
 class AuthWrapper extends React.Component<IProps> {
   render() {
-    const { reqPerm, redirect, authorities } = this.props
+    const { reqPerm, authorities } = this.props
     const hasPerm = intersection(reqPerm, authorities).length > 0
     if (hasPerm) return this.props.children
     else return null
