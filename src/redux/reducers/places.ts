@@ -1,49 +1,48 @@
 import { AnyAction } from "redux"
 
-type Coords = {
+type ICoords = {
   lat: number
   lng: number
 }
 
-type ViewPort = {
-  northeast: Coords
-  southwest: Coords
+type IViewPort = {
+  northeast: ICoords
+  southwest: ICoords
 }
 
-type Geometry = {
-  location: Coords
-  viewPort: ViewPort
+type IGeometry = {
+  location: ICoords
+  viewPort: IViewPort
 }
 
-interface Photo {
+interface IPhoto {
   height: number
   html_attributions: Array<string>
   photo_reference: string
   width: number
 }
 
-export interface PlaceDetail {
-  geometry: Geometry
+export interface IPlaceDetail {
+  geometry: IGeometry
   icon: string
   id: string
   name: string
-  photos: Array<Photo>
+  open: boolean
+  photos: Array<string>
   place_id: string
   reference: string
   scope: string
   types: Array<string>
+  rating: number
+  user_ratings_total: number
   vicinity: string
 }
 
 export interface IPlaces {
-  html_attributions: Array<never>
-  next_page_token: string
-  results: Array<PlaceDetail>
+  results: Array<IPlaceDetail>
 }
 
 const initPlaces = {
-  html_attributions: [{}],
-  next_page_token: "",
   results: [{}]
 }
 

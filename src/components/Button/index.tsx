@@ -12,10 +12,10 @@ const Button: FunctionComponent<IProps> = props => {
     cursor: pointer;
     outline: none;
     font-size: large;
-    &:hover {
-      background: #0002;
-    }
     &:focus {
+      background: #0001;
+    }
+    &:hover {
       background: #0002;
     }
     transition: 0.15s;

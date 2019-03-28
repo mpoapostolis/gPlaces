@@ -5,7 +5,8 @@ import Button from "../Button"
 import { ReactComponent as Favorite } from "./favorite.svg"
 import { IPlaceDetail } from "../../redux/reducers/places"
 
-interface IProps extends IPlaceDetail {}
+// interface IProps extends IPlaceDetail {}
+interface IProps {}
 function Card(props: IProps) {
   return (
     <I18n.Consumer>

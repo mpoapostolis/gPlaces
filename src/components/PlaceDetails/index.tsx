@@ -1,6 +1,8 @@
 import React from "react"
 import { cx } from "emotion"
 import { detailContainer } from "./css"
+import { ReduxState } from "../../redux/reducers"
+import { connect } from "react-redux"
 
 interface IProps {
   layoutClass: string
@@ -17,4 +19,8 @@ function Details(props: IProps) {
   )
 }
 
-export default Details
+function mapStateToProps(state: ReduxState) {
+  return {}
+}
+
+export default connect(mapStateToProps)(Details)
