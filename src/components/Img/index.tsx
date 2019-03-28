@@ -20,7 +20,7 @@ const Img: FunctionComponent<IProps> = props => {
     alt = "😢🔥🔥 Error 🔥🔥😢"
   } = props
   const [_, type] = src.split(".")
-  const re = new RegExp(type)
+  const re = new RegExp(`.${type}`)
   const minSrc = src.replace(re, `_min.${type}`)
   const [imgSrc, setImgSrc] = useState(progressive ? minSrc : src)
   useEffect(() => {
