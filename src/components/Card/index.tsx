@@ -3,7 +3,6 @@ import { container, imgCont, infoCont, footer, body } from "./css"
 import I18n from "../../I18n"
 import Button from "../Button"
 import { ReactComponent as Favorite } from "./favorite.svg"
-import { IPlaceDetail } from "../../redux/reducers/places"
 
 // interface IProps extends IPlaceDetail {}
 interface IProps {}
